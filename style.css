@@ -1,0 +1,16 @@
+li {
+  list-style: none;
+  padding: 20px;
+  float: left;
+}
+
+.header {
+  background-color: gray;
+  height: 100px;
+}
+
+.header-logo {
+  font-size: 35px;
+  padding: 20px;
+  float: left;
+}
