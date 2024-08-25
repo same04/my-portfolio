@@ -1,5 +1,5 @@
 .header-content {
-  padding: 20px;
+  margin: 20px;
 }
 
 .header {
@@ -15,7 +15,7 @@
 .header-logo {
   color: antiquewhite;
   font-size: 35px;
-  padding: 20px;
+  margin: 20px;
 }
 
 .content {

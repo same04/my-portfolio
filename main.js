@@ -2,44 +2,40 @@ const Myphoto = document.getElementById("myphoto");
 const BeforeButton = document.getElementById("beforeImg");
 const AfterButton = document.getElementById("afterImg");
 const Img = ["deer.JPEG", "HU.jpg", "sakurajima.JPEG", "simohuri.jpg"];
-/*
-const ImgExp = [{Img:"deer.JPEG", Exp:"これは"}]
-*/
+
 let CurrentImg = Img[0];
 let n = 0;
 
 const nextImg = function (n) {
   CurrentImg = Img[n + 1];
   Myphoto.src = CurrentImg;
+  n++;
+  return n;
 };
 
 const beforeImg = function (n) {
   CurrentImg = Img[n - 1];
   Myphoto.src = CurrentImg;
+  n--;
+  return n;
 };
 
 AfterButton.onclick = function () {
   if (n === 0) {
-    nextImg(0);
-    n++;
+    n = nextImg(0);
   } else if (n === 1) {
-    nextImg(1);
-    n++;
+    n = nextImg(1);
   } else if (n === 2) {
-    nextImg(2);
-    n++;
+    n = nextImg(2);
   }
 };
 
 BeforeButton.onclick = function () {
   if (n === 1) {
-    beforeImg(1);
-    n--;
+    n = beforeImg(1);
   } else if (n === 2) {
-    beforeImg(2);
-    n--;
+    n = beforeImg(2);
   } else if (n === 3) {
-    beforeImg(3);
-    n--;
+    n = beforeImg(3);
   }
 };
